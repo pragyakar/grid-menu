@@ -28,16 +28,16 @@ body {
 }
 
 .container-one {
-  background: url('/images/europe.jpg');
+  background: url('../images/europe.jpg');
 }
 .container-two {
-  background: url('/images/america.jpg');
+  background: url('../images/america.jpg');
 }
 .container-three {
-  background: url('/images/africa.jpg');
+  background: url('../images/africa.jpg');
 }
 .container-four {
-  background: url('/images/hongkong.jpg');
+  background: url('../images/hongkong.jpg');
 }
 .container {
   position: relative;
@@ -45,7 +45,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 0.4s ease;
   color: #ffffff;
 }
 .container-content {
@@ -53,14 +52,18 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   background: rgba(0,0,0,0.5);
   padding: 10px 80px;
   border-radius: 5px;
   text-align: center;
 }
+.container:hover .container-content{
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .wrapper {
     grid-template-columns: 100%;
   }
