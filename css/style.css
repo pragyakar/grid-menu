@@ -18,19 +18,38 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 .wrapper {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  height: 100vh;
+}
+/* TODO: Add media queries */
+.container-one {
+  background: url('/images/europe.jpg');
+}
+.container-two {
+  background: url('/images/america.jpg');
+}
+.container-three {
+  background: url('/images/africa.jpg');
+}
+.container-four {
+  background: url('/images/hongkong.jpg');
 }
 .container {
-  border: 1px solid grey;
   position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .container:hover .container-content {
-  font-size: 20px;
-  transition: 0.2s ease;
+  font-size: 150%;
+  transition: 0.1s ease;
 }
+
 .container-content {
   position: absolute;
   top: 50%;
@@ -38,3 +57,4 @@ time, mark, audio, video {
   transform: translate(-50%, -50%);
   transition: 0.2s ease;
 }
+/* TODO: Add animation for media query break */
