@@ -24,8 +24,9 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  overflow: hidden;
 }
-/* TODO: Add media queries */
+
 .container-one {
   background: url('/images/europe.jpg');
 }
@@ -44,17 +45,31 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: 0.4s ease;
+  color: #ffffff;
 }
-.container:hover .container-content {
-  font-size: 150%;
-  transition: 0.1s ease;
-}
-
 .container-content {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.2s ease;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 80px;
+  border-radius: 5px;
+  text-align: center;
 }
-/* TODO: Add animation for media query break */
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 100%;
+  }
+  .container {
+    height: 25vh;
+  }
+  .container-content {
+    top: 50%;
+    font-size: 12px;
+    padding: 5px 70px;
+  }
+} 
