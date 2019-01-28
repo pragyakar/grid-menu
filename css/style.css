@@ -18,3 +18,23 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 100vh;
+}
+.container {
+  border: 1px solid grey;
+  position: relative;
+}
+.container:hover .container-content {
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+.container-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease;
+}
